@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>{{ details.name }}</h1>
+            <img src="{{ details.image.url }}" alt="{{ details.name }}" width="300">
+
+            <p><strong>Category:</strong> {{ details.category }}</p>
+            <p><strong>Calories:</strong> {{ details.calories }}</p>
+            <p><strong>Protiens:</strong> {{ details.protiens }}</p>
+            <p><strong>Fat:</strong> {{ details.fat }}</p>
+            <p><strong>Carbohydrates:</strong> {{ details.carbohydrates }}</p>
+        </div>
+        <a href="{% url 'food_list' %}" class="btn btn-warning">Back to List</a>
+    </div>
+</body>
+</html>
